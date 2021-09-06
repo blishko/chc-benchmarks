@@ -9,5 +9,5 @@
                   (= z1 (ite (< x0 500) (+ z0 2) z0)))))
     (=> a!1 (inv x1 y1 z1)))))
 (assert (forall ((z0 Int) (y0 Int) (x0 Int))
-  (=> (and (inv x0 y0 z0) (= x0 0) (= y0 z0)) false)))
+  (=> (and (inv x0 y0 z0) (= x0 0) (> y0 0) (= y0 z0)) false)))
 (check-sat)
